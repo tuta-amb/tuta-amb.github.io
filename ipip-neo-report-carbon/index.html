@@ -4,8 +4,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f4f4;--layer:#fff;--text:#161616;--text2:#525252;--border:#e0e0e0;--strong:#8d8d8d;--blue:#0f62fe;--blue-t:#d0e2ff;--gray-t:#e0e0e0;--teal-t:#9ef0f0;--teal-t-text:#004144;--blue-t-text:#001d6c;
---low:#4589ff;--average:#a8a8a8;--high:#08bdba}
+:root{--bg:#f4f4f4;--layer:#fff;--text:#161616;--text2:#525252;--border:#e0e0e0;--strong:#8d8d8d;--blue:#0f62fe;--orange-t:#ffe8d9;--orange-t-text:#8a3800;--yellow-t:#fcf4d6;--yellow-t-text:#684e00;--green-t:#a7f0ba;--green-t-text:#044317;
+--low:#ff832b;--average:#f1c21b;--high:#24a148}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:400 14px/20px "IBM Plex Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;letter-spacing:.16px;-webkit-text-size-adjust:100%}
@@ -21,7 +21,7 @@ h3{font:600 14px/20px "IBM Plex Sans",sans-serif;margin:24px 0 8px;padding:0 16p
 p{margin:0 0 12px;max-width:80ch;text-align:left}
 .note{background:#fcf4d6;border-left:3px solid #f1c21b;padding:12px 16px;font-size:12px;line-height:16px;font-weight:600;margin:8px 0 16px}
 .intro{background:var(--layer);padding:16px 16px 4px;color:var(--text)}
-.intro p{font-size:14px}
+.intro p{font-size:14px;max-width:none}
 section{margin-top:32px;background:var(--bg)}
 .cols{background:var(--layer);display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--border)}
 .prose{padding:16px;border-right:1px solid var(--border)}
@@ -36,13 +36,13 @@ td.f{padding-left:16px}
 th:first-child{padding-left:16px}
 tr.dom td{font-weight:600;background:#f4f4f4}
 td.c{width:30%;min-width:80px}
-.bar{position:relative;height:8px;background:#e0e0e0}
+.bar{position:relative;height:12px;background:#e0e0e0}
 .bar i{display:block;height:100%}
 .bar i.low{background:var(--low)}.bar i.average{background:var(--average)}.bar i.high{background:var(--high)}
-.bar b{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:#8d8d8d}
+.bar b{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:#525252}
 td.t{width:72px;white-space:nowrap}
 .tag{display:inline-block;font-size:12px;line-height:18px;padding:0 8px;border-radius:24px}
-.tag.low{background:var(--blue-t);color:var(--blue-t-text)}.tag.average{background:var(--gray-t);color:#161616}.tag.high{background:var(--teal-t);color:var(--teal-t-text)}
+.tag.low{background:var(--orange-t);color:var(--orange-t-text)}.tag.average{background:var(--yellow-t);color:var(--yellow-t-text)}.tag.high{background:var(--green-t);color:var(--green-t-text)}
 .verdict{margin:0;padding:12px 16px;font-weight:600;border-left:3px solid var(--blue);background:#edf5ff;max-width:none}
 ul{list-style:none;margin:0;padding:0;background:var(--layer);border-top:1px solid var(--border)}
 li{padding:8px 16px;border-bottom:1px solid var(--border);color:var(--text2);max-width:none}
@@ -50,8 +50,14 @@ li i:first-child{font-style:normal;font-weight:600;color:var(--text)}
 @media(max-width:672px){
  main{padding:8px}
  .cols{grid-template-columns:1fr}.prose{border-right:0;border-bottom:1px solid var(--border)}
- td.c{display:none}th:nth-child(3){display:none}
  h1{font-size:20px;line-height:28px}
+ th{font-size:10px;line-height:14px;white-space:normal;padding:6px 4px}
+ td{padding:0 4px;height:36px}
+ td.f,th:first-child{padding-left:8px}
+ th.s,td.s{width:34px;font-size:11px}
+ td.c{width:auto;min-width:56px}
+ td.t{width:auto}
+ .tag{padding:0 6px}
 }
 </style></head><body>
 <header class="bar">IPIP-NEO<span>Carbon remake</span></header>
